@@ -5,6 +5,8 @@ find_package(ament_cmake REQUIRED)
 
 find_package(Boost REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(moveit_common REQUIRED)
+moveit_package()
 find_package(moveit_core REQUIRED)
 find_package(moveit_ros_planning REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
@@ -23,6 +25,8 @@ add_compile_options(-fvisibility-inlines-hidden)
 set(PROJECT_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/include/moveit/task_constructor)
 
 add_subdirectory(src)
+# TODO: enable python wrapper
+#add_subdirectory(python)
 add_subdirectory(test)
 
 install(DIRECTORY include/ DESTINATION include

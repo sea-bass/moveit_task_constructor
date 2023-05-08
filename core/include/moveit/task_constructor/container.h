@@ -53,6 +53,7 @@ public:
 
 	size_t numChildren() const;
 	Stage* findChild(const std::string& name) const;
+	Stage* operator[](int index) const;
 
 	/** Callback function type used by traverse functions
 	 *  Receives currently visited Stage and current depth in hierarchy
@@ -162,7 +163,7 @@ class Fallbacks : public ParallelContainerBase
 	inline void replaceImpl();
 
 public:
-	PRIVATE_CLASS(Fallbacks);
+	PRIVATE_CLASS(Fallbacks)
 	Fallbacks(const std::string& name = "fallbacks");
 
 	void reset() override;

@@ -1,6 +1,6 @@
 <package format="2">
 	<name>rviz_marker_tools</name>
-	<version>0.0.0</version>
+	<version>0.1.0</version>
 	<description>Tools for marker creation / handling</description>
 
 	<license>BSD</license>
@@ -12,6 +12,7 @@
 	<build_depend>eigen</build_depend>
 
 	<depend>geometry_msgs</depend>
+	<depend>moveit_common</depend>
 	<depend>rclcpp</depend>
 	<depend>rviz2</depend>
 	<depend>tf2_eigen</depend>
